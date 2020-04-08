@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Joken-Po Game</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            canvas {
+                image-rendering: pixelated;
+                image-rendering: crisp-edges;
+                image-rendering: -moz-crisp-edges;
+                border: 1px solid #CCCCCC;
+                width: 400px;
+                height: 400px;
+                margin-bottom: 20px;
+                margin-left: 20px;
+                margin-right: 20px;
+                display: inline-block;
+                vertical-align: top;
+            }
+            #options button{
+                margin: 10px;
+            }
+        </style>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body id="main">
+    </body>
+    <script type="module">
+        import createMatch from "./Match.js";
+        import renderScreen from "./RenderScreen.js";
+        import createOptionHandler from "./OptionHandler.js";
+        import {createCanvas} from "./RenderScreen.js";
+
+        var match = createMatch();
+
+        var socket = io();
+
+        socket.on('connect', () => {
+            var socketId = socket.id;
+            console.log(`Player connected on Client with id: ${socketId}`);
+
+            var screen = createCanvas(document.getElementById("main"));
+            renderScreen(match, requestAnimationFrame, {id: socketId}, screen);
+        });
+
+        socket.on('setup', (state, socket) => {
+            match.setState(state);
+            createOptionHandler(match.state, socket);
+        });
+
+        socket.on('add-player', (object) => {
+            console.log(`Receiving ${object.type} -> ${object.id}`);
+            match.addPlayer(object);
+        });
+
+        socket.on('remove-player', (object) => {
+            console.log(`Receiving ${object.type} -> ${object.id}`);
+            match.removePlayer(object);
+        });
+    </script>
+</html>
