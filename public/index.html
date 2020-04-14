@@ -27,6 +27,7 @@
         <script src="/socket.io/socket.io.js"></script>
     </head>
     <body id="main">
+
     </body>
     <script type="module">
         import createMatch from "./Match.js";
@@ -35,7 +36,6 @@
         import {createCanvas} from "./RenderScreen.js";
 
         var match = createMatch();
-
         var socket = io();
 
         socket.on('connect', () => {
@@ -46,7 +46,7 @@
             renderScreen(match, requestAnimationFrame, {id: socketId}, screen);
         });
 
-        socket.on('setup', (state, socket) => {
+        socket.on('setup', (state) => {
             match.setState(state);
             createOptionHandler(match.state, socket);
         });

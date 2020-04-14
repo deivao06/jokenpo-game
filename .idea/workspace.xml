@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bad101c6-3945-47f4-998e-db3732c0e21a" name="Default Changelist" comment="" />
+    <list default="true" id="bad101c6-3945-47f4-998e-db3732c0e21a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Match.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/Match.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/OptionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/OptionHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/RenderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/RenderScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +28,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZzImKLYjjEzvmpuPq02HDsS8F5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sprites" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
@@ -60,7 +73,10 @@
       <workItem from="1585941740003" duration="6516000" />
       <workItem from="1586193022307" duration="2244000" />
       <workItem from="1586262780954" duration="9228000" />
-      <workItem from="1586351314551" duration="1940000" />
+      <workItem from="1586351314551" duration="4538000" />
+      <workItem from="1586438592600" duration="880000" />
+      <workItem from="1586448663670" duration="7656000" />
+      <workItem from="1586783517321" duration="3233000" />
     </task>
     <servers />
   </component>
@@ -68,21 +84,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1124" y="125" width="1080" height="754" key="DiffContextDialog" timestamp="1586463289306">
+      <screen x="1024" y="0" width="1280" height="1024" />
+    </state>
+    <state x="1124" y="125" width="1080" height="754" key="DiffContextDialog/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1586463289306" />
     <state x="1153" y="137" key="SettingsEditor" timestamp="1585835690961">
       <screen x="1024" y="0" width="1280" height="1024" />
     </state>
     <state x="1153" y="137" key="SettingsEditor/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1585835690961" />
-    <state x="1320" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1586351320895">
+    <state x="1320" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1586783658695">
       <screen x="1024" y="0" width="1280" height="1024" />
     </state>
-    <state x="1320" y="329" key="com.intellij.ide.util.TipDialog/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1586351320895" />
+    <state x="1320" y="329" key="com.intellij.ide.util.TipDialog/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1586783658695" />
+    <state x="1328" y="194" width="662" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586463253818">
+      <screen x="1024" y="0" width="1280" height="1024" />
+    </state>
+    <state x="1328" y="194" width="662" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1586463253818" />
     <state x="1328" y="228" key="run.anything.popup" timestamp="1585843420697">
       <screen x="1024" y="0" width="1280" height="1024" />
     </state>
     <state x="1328" y="228" key="run.anything.popup/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1585843420697" />
-    <state x="1327" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1585840933275">
+    <state x="1327" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1586443320626">
       <screen x="1024" y="0" width="1280" height="1024" />
     </state>
-    <state x="1327" y="232" width="672" height="678" key="search.everywhere.popup/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1585840933275" />
+    <state x="1327" y="232" width="672" height="678" key="search.everywhere.popup/1024.0.1280.1024/0.256.1024.768@1024.0.1280.1024" timestamp="1586443320626" />
   </component>
 </project>

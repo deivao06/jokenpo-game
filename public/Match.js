@@ -3,8 +3,6 @@ export default function createMatch(){
         id: Math.floor(Math.random() * 10000),
         players: {},
         started: false,
-        counter: 10,
-        counted: false
     };
 
     var observers = [];
@@ -65,50 +63,38 @@ export default function createMatch(){
 
     function startMatch() {
         state.started = true;
-
-        var interval = setInterval(function () {
-            state.counter --;
-            var counted = checkCounter(interval);
-            if (counted){
-                checkWinner(state.players);
-                startMatch();
-            }
-        },1000);
     }
 
     function stopMatch() {
         state.started = false;
-        state.counter = 10;
     }
 
-    function checkCounter(interval) {
-        if (state.counter < 0){
-            clearInterval(interval);
-            state.counter = 10;
-            return true;
-        }
+    function setPlayerOption(object){
+        var player = state.players[object.id];
+        player.playerOption = object.option;
 
-        return false;
+        checkAndComparePlayersOptions();
     }
 
-    function checkWinner(players) {
-        for(var player1Id in players){
-            var player1 = players[player1Id];
+    function checkAndComparePlayersOptions(){
+        for (var playerId in state.players){
+            var player1 = state.players[playerId];
 
-            for (var player2Id in players){
-                var player2 = players[player2Id];
-
-                if (player1 !== player2){
+            for (var player2Id in state.players){
+                var player2 = state.players[player2Id];
+                if (player1 != player2){
                     if (player1.playerOption === "paper" && player2.playerOption === "rock"
                         || player1.playerOption === "rock" && player2.playerOption === "scissor"
                         || player1.playerOption === "scissor" && player2.playerOption === "paper")
                     {
                         player1.playerScore ++;
                         player1.playerOption = null;
+                        player2.playerOption = null;
                         return;
 
                     }else if (player1.playerOption === player2.playerOption){
                         player1.playerOption = null;
+                        player2.playerOption = null;
                         return;
                     }
 
@@ -116,11 +102,6 @@ export default function createMatch(){
                 }
             }
         }
-    }
-
-    function setPlayerOption(object){
-        var player = state.players[object.id];
-        player.playerOption = object.option;
     }
 
     return {

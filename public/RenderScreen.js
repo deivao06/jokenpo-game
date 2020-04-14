@@ -13,9 +13,6 @@ export default function renderScreen(match, requestAnimationFrame, currentPlayer
     }
 
     var image1 = new Image();
-    var counter = match.state.counter;
-    var counterMeasure = canvasContext.measureText(counter);
-
     canvasContext.clearRect(0, 0, canvas.width, canvas.height);
     canvasContext.font = "20px Sans-serif";
 
@@ -32,8 +29,6 @@ export default function renderScreen(match, requestAnimationFrame, currentPlayer
             image1.src = `sprites/${player1.playerOption}-big.png`;
             canvasContext.drawImage(image1, (canvas.width / 2) - (image1.width / 2), canvas.height - 100, 100, 100);
         }
-
-        canvasContext.fillText(counter, (canvas.width / 2) - (counterMeasure.width / 2), (canvas.height / 2));
     }
 
     if (Object.keys(match.state.players).length < 2){

@@ -7,15 +7,15 @@ export default function createOptionHandler(state, socket){
 
     if (statePlayer){
         rock.addEventListener("click", function () {
-            statePlayer.playerOption = 'rock';
+            socket.emit('set-player-option', 'rock');
         });
 
         paper.addEventListener("click", function () {
-            statePlayer.playerOption = 'paper';
+            socket.emit('set-player-option', 'paper');
         });
 
         scissor.addEventListener("click", function () {
-            statePlayer.playerOption = 'scissor';
+            socket.emit('set-player-option', 'scissor');
         })
     }
 }
